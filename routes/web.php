@@ -1,10 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\EventController;
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/',[EventController::class, 'index'] );
+Route::get('/event/create',[EventController::class, 'create'] );
 
 
 Route::get('/about', function () {
